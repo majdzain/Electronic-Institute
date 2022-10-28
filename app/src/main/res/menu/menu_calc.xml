@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UserActivity">
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/overflow"
+        android:orderInCategory="101"
+        android:title="القائمة"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/menu_scien"
+                android:title="الآلة حاسبة العلمية"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/menu_unit"
+                android:title="تحويل الواحدات"
+                app:showAsAction="never">
+                <menu>
+
+                    <item
+                        android:id="@+id/menu_units"
+                        android:title="المساحة"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/menu_unitl"
+                        android:title="المسافة"
+                        app:showAsAction="never" />
+                    <item
+                         android:id="@+id/menu_unitw"
+                       android:title="الكتلة"
+                        app:showAsAction="never" />
+                    <item
+                        android:id="@+id/menu_unitt"
+                        android:title="درجة الحرارة"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+            <item
+                android:id="@+id/menu_settings"
+                android:title="الإعدادات"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/menu_u_about"
+                android:title="حول المعهد"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/menu_u_exit"
+                android:title="خروج"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>

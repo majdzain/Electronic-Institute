@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotifFragment">
+
+    <com.ei.zezoo.AnimatedExpandableListView
+        android:id="@+id/notifExpList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:childDivider="@android:color/transparent"
+        android:divider="@color/blue"
+        android:dividerHeight="1dp"
+        android:choiceMode="singleChoice"
+        android:groupIndicator="@drawable/notification_group_indicator"
+        android:transcriptMode="alwaysScroll" />
+
+    <ListView
+        android:id="@+id/notifList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:childDivider="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="1dp" />
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floatingActionMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        app:menu_labels_customFont="fonts/font_1.ttf"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_colorNormal="@color/blue"
+        app:menu_colorPressed="@color/blue"
+        app:menu_icon="@drawable/sort"
+        app:menu_fab_label=""
+        app:menu_labels_textColor="@color/spec_black"
+        app:menu_labels_colorNormal="@color/floating_light"
+        app:menu_labels_colorPressed="@color/floating_pressed"
+        app:menu_openDirection="up"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floatingActionSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#66c0f7"
+            app:fab_colorPressed="#66c0f7"
+            app:fab_label="فرز حسب المواد"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floatingActionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#66c0f7"
+            app:fab_colorPressed="#66c0f7"
+            app:fab_label="فرز حسب النوع"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floatingActionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#66c0f7"
+            app:fab_colorPressed="#66c0f7"
+            app:fab_label="فرز حسب التاريخ"
+            app:fab_size="mini" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floatingActionNon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#66c0f7"
+            app:fab_colorPressed="#66c0f7"
+            app:fab_label="بدون فرز"
+            app:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

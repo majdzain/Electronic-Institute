@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "64085270994",
+    "project_id": "elec-46701",
+    "storage_bucket": "elec-46701.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64085270994:android:abcbf672f116fb1d39680b",
+        "android_client_info": {
+          "package_name": "com.ei.zezoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64085270994-l3nl43ihqsurinkv5a1gt721mlopcv19.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ei.zezoo",
+            "certificate_hash": "e338f443fdbca0effce7443dde10de4a3c4ef2ff"
+          }
+        },
+        {
+          "client_id": "64085270994-3uln5mjkdv6asn2ghhvohiu8c83etnmm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmv76eAM90zbudYiLJhwAlNrxSIyAVQyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64085270994-3uln5mjkdv6asn2ghhvohiu8c83etnmm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

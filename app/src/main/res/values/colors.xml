@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+<color name="floating_light">#f1f1f1</color>
+    <color name="floating_pressed">#d9e5ef</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="black">#000000</color>
+    <color name="blue">#5dade2</color>
+    <color name="lighter_blue">#D5E1E2</color>
+    <color name="purple">#aa66cc</color>
+    <color name="light_purple">#BDACCC</color>
+    <color name="green">#99cc00</color>
+    <color name="orange">#FCB43C</color>
+    <color name="brown">#443424</color>
+    <color name="orangeS">#FE9A2E</color>
+    <color name="spec_black">#0b3b39</color>
+    <color name="gray">#f2f2f2</color>
+    <color name="light_orange">#F7BE81</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FE2E2E</color>
+    <color name="yellow">#FFBF00</color>
+    <color name="light_green">#04b4ae</color>
+    <color name="light_blue">#A9D0F5</color>
+    <color name="darker_red">#B40404</color>
+    <color name="darker_blue">#084B8A</color>
+    <color name="darker_orange">#61380B</color>
+    <color name="darker_green">#5E610B</color>
+    <color name="dark_orange">#F45814</color>
+    <color name="dark_gray">#34495E</color>
+    <color name="light_red">#FF0040</color>
+</resources>

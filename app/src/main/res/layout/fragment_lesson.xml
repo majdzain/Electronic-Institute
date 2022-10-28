@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/background2">
+
+    <LinearLayout
+        android:id="@+id/layoutVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+       >
+
+        <RelativeLayout
+            android:id="@+id/videoDownloader"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:text="حرصاً على فهمكم الجيد للدرس يجب تحميله كاملاً قبل المشاهدة"
+                android:textColor="@color/brown"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/number_progress_bar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp"
+                android:text="جاري التحميل..."
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <com.daimajia.numberprogressbar.NumberProgressBar
+                android:id="@+id/number_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number_progress_bar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnDownload"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:drawableRight="@drawable/download_video"
+                    android:text="تحميل الدرس"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:theme="@style/AddNewPurBill" />
+
+                <Button
+                    android:id="@+id/btnStop"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:drawableRight="@drawable/cancel"
+                    android:text="إيقاف التحميل"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:theme="@style/AddNewPurBill"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnPause"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:drawableRight="@drawable/pause_download"
+                    android:text="إيقاف مؤقت"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:theme="@style/AddNewPurBill"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnWatch"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:drawableRight="@drawable/watch"
+                    android:text="مشاهدة الدرس"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:theme="@style/AddNewPurBill"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/videoSurfaceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/black"
+            android:visibility="gone">
+
+            <com.ei.zezoo.ResizeSurfaceView
+                android:id="@+id/videoSurface"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center" />
+
+            <ProgressBar
+                android:id="@+id/loading"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center" />
+
+            <ProgressBar
+                android:id="@+id/bottom_progressbar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_gravity="bottom"
+                android:progress="10"
+                android:progressDrawable="@drawable/layer_seekbar_progress" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutVideo"
+        android:visibility="visible"></FrameLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:id="@+id/hideVideo"
+        android:clickable="true"
+        android:layout_below="@+id/layoutVideo"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_hide"
+        android:src="@drawable/hide" />
+
+</RelativeLayout>

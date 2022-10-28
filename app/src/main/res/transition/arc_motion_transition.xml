@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changeBounds
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/decelerate_cubic"
+    >
+    <!--
+        ArcMotion
+            A PathMotion that generates a curved path along an arc on
+            an imaginary circle containing the two points.
+
+            android:maximumAngle
+                The maximum arc angle in degrees between the start and end points.
+
+            android:minimumHorizontalAngle
+                The minimum arc angle in degrees between the start and end points
+                when they are close to horizontal.
+
+            android:minimumVerticalAngle
+                The minimum arc angle in degrees between the start and end points
+                 when they are close to vertical.
+    -->
+    <arcMotion
+        android:maximumAngle="45"
+        android:minimumHorizontalAngle="90"
+        android:minimumVerticalAngle="0"
+        />
+</changeBounds>

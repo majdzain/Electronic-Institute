@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/menu_connected"
+        android:orderInCategory="101"
+        android:icon="@drawable/reconnect"
+        android:title="غير متصل"
+        app:showAsAction="always"
+        android:checkable="false"/>
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/overflow"
+        android:orderInCategory="101"
+        android:title="القائمة"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/menu_u_sort"
+                android:title="فرز الإشعارات"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/menu_u_sign"
+                android:title="التسجيل في الدورات"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/menu_u_about"
+                android:title="حول المعهد"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/menu_u_exit"
+                android:title="خروج"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/comment_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/commentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#9CFEE3BC"
+        android:text="Student"
+        android:textColor="#000"
+        android:textSize="16.5sp"
+        android:textStyle="bold" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/commentMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@color/blue"
+        android:elevation="4dp"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:id="@+id/commentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="6dp"
+            android:maxWidth="276dp"
+            android:text="Comment Of StudentAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            android:textColor="#000"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:id="@+id/commentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textColor="#6f6e6e"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

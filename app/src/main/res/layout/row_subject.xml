@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.AppCompat.Button.Borderless"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:clickable="true"
+    android:layoutDirection="rtl"
+    android:theme="@style/AddNewPurBill"
+    android:weightSum="10">
+
+    <ImageView
+        android:id="@+id/rowImage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+
+        android:layout_weight="1"
+        android:src="@drawable/physics" />
+
+    <TextView
+        android:id="@+id/rowName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:layout_weight="4"
+        android:gravity="center"
+        android:text="الفيزياء"
+        android:textColor="@color/brown"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/rowNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="3 دروس"
+        android:textColor="@color/spec_black"
+        android:textSize="18.5sp"
+        android:textStyle="bold" />
+
+
+</TableRow>

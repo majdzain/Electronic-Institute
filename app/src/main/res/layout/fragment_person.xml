@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonFragment">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        android:layoutDirection="ltr"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabBackground="@drawable/tab_background_color_selector"
+        app:tabIconTint="@color/tab_content_color_selector"
+        app:tabIndicator="@null"
+        app:tabSelectedTextColor="@color/md_white_1000"
+        app:tabTextAppearance="@style/spinnerDropDownItemStyle"
+        app:tabTextColor="@color/brown">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/person_tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_launcher"
+            android:text="معلومات المعهد" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/person_tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_id"
+            android:text="المعرف الشخصي" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/person_tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_contact"
+            android:text="التواصل" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+    <FrameLayout
+        android:id="@+id/loadingFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="65dp"
+            android:text="تحميل الملف الشخصي..."
+            android:textColor="@color/orange"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+</FrameLayout>

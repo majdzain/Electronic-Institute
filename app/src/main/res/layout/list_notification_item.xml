@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="beforeDescendants"
+    android:layoutDirection="rtl"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="2dp"
+    android:id="@+id/notif_linear">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_notification_item_selector"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/notifImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:src="@drawable/ic_edit"></ImageView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="horizontal"
+                android:paddingLeft="3dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    android:id="@+id/notifSubject"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.5"
+                    android:gravity="right"
+                    android:paddingStart="5dp"
+                    android:singleLine="true"
+                    android:text="Subject"
+                    android:textColor="@color/blue"
+                    android:textSize="17.5sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/notifDate"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="left"
+                    android:paddingEnd="5dp"
+                    android:singleLine="true"
+                    android:text="Date"
+                    android:textColor="@color/spec_black"
+                    android:textSize="15sp" />
+
+                <com.ei.zezoo.MyTextView
+                    android:id="@+id/notifNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/txt_new_background"
+                    android:gravity="center"
+                    android:text="ج"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_weight="5"
+                android:orientation="horizontal"
+                android:paddingLeft="3dp"
+                android:paddingBottom="2dp">
+
+                <TextView
+                    android:id="@+id/notifName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="5dp"
+                    android:singleLine="true"
+                    android:text="Name"
+                    android:textColor="@color/spec_black"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/notifDownload"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentLeft="false"
+                    android:layout_gravity="left"
+                    android:src="@drawable/download" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

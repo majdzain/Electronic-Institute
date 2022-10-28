@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+
+        android:layout_height="?android:attr/actionBarSize" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        tools:context=".LoginActivity">
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/list_login_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel2">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="اسم المستخدم"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel2">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="كلمة السر"
+                        android:imeActionId="6"
+                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/email_sign_in_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="تسجيل الدخول"
+                    android:textColor="@color/brown"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:theme="@style/AddNewPayment" />
+
+                <Button
+                    android:id="@+id/btn_sign"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="التسجيل في المعهد"
+                    android:textColor="@color/orange"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:theme="@style/SaveButton" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/list_sign_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/btn_education"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:theme="@style/CancelButton">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center_vertical"
+                            android:layout_marginRight="15dp"
+                            android:text="دورات مناهج التربية السورية"
+                            android:textColor="@color/spec_black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginRight="15dp"
+                            android:text="مراحل التعليم الأساسي والثانوي"
+                            android:textColor="@color/spec_black"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="8dp"
+                        android:src="@mipmap/ic_education" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black_overlay" />
+
+                <LinearLayout
+                    android:id="@+id/btn_coding"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:theme="@style/AddNewPayment">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right|center_vertical"
+                            android:layout_marginRight="15dp"
+                            android:text="دورات البرمجة والتطوير"
+                            android:textColor="@color/spec_black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginRight="15dp"
+                            android:text="خوارزميات, Java, C++, Android,..."
+                            android:textColor="@color/spec_black"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@mipmap/ic_coding" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black_overlay" />
+
+                <LinearLayout
+                    android:id="@+id/btn_designing"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:theme="@style/AddNewPurBill">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right|center_vertical"
+                            android:layout_marginRight="15dp"
+                            android:text="دورات التصميم والرسم"
+                            android:textColor="@color/spec_black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginRight="15dp"
+                            android:text="أساسيات التصميم, Photoshop, Illistrator,..."
+                            android:textColor="@color/spec_black"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="2dp"
+                        android:src="@mipmap/ic_designing" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black_overlay" />
+
+                <LinearLayout
+                    android:id="@+id/btn_english"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:theme="@style/AddNewCustomer">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right|center_vertical"
+                            android:layout_marginRight="15dp"
+                            android:text="دورات اللغة الإنكليزية"
+                            android:textColor="@color/spec_black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginRight="15dp"
+                            android:text="English 1,2,3,4,5,6"
+                            android:textColor="@color/spec_black"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="2dp"
+                        android:src="@mipmap/ic_english" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black_overlay" />
+
+                <LinearLayout
+                    android:id="@+id/btn_arts"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:theme="@style/AddNewSalesBill">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right|center_vertical"
+                            android:layout_marginRight="15dp"
+                            android:text="دورات المهن والحرف"
+                            android:textColor="@color/spec_black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginRight="15dp"
+                            android:text="الحلاقة, الخياطة, صيانة الموبايل,..."
+                            android:textColor="@color/spec_black"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:padding="2dp"
+                        android:src="@mipmap/ic_arts" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    </LinearLayout>
+</LinearLayout>

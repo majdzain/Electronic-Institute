@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reply_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/replyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student"
+        android:textColor="#000"
+        android:textSize="16sp"
+        />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layoutDirection="rtl"
+    android:id="@+id/linearL">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/replyMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@color/blue"
+        android:elevation="4dp"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:id="@+id/replyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="6dp"
+            android:maxWidth="240dp"
+            android:text="Comment Of StudentAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="3dp"
+        android:orientation="horizontal">
+
+        <com.ei.zezoo.MyTextView
+            android:id="@+id/btnLike"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/like"
+            android:clickable="true"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:text="20"
+            android:textColor="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:theme="@style/AddNewTemBill" />
+
+        <com.ei.zezoo.MyTextView
+            android:id="@+id/btnDislike"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/dislike"
+            android:clickable="true"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:text="20"
+            android:textColor="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:theme="@style/CancelButton" />
+    </LinearLayout>
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/replyDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textColor="#6f6e6e"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

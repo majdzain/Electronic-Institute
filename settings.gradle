@@ -1,0 +1,6 @@
+include ':android-images-view_v1.0.5'
+
+include ':app'
+
+include ':app', ':vpnLib'
+rootProject.name = "Electronic Institute"

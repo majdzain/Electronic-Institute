@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ques_child_linear">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/childCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="40dp"
+        android:background="@color/floating_pressed"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/floating_pressed"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layoutDirection="ltr">
+
+                <TextView
+                    android:id="@+id/quesDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="20/1/2020|20:35"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/personName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="8"
+                    android:gravity="right"
+                    android:text="مجد زين الدين"
+                    android:textColor="@color/blue"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/quesLine"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/blue" />
+
+            <TextView
+                android:id="@+id/quesTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="6dp"
+                android:text="............................................................................................................................................................................................................................................................................................................................................................................................................................................................................."
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal">
+
+                <com.ei.zezoo.MyTextView
+                    android:id="@+id/btnLike"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/like"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="20"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:theme="@style/AddNewTemBill" />
+
+                <com.ei.zezoo.MyTextView
+                    android:id="@+id/btnDislike"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/dislike"
+                    android:clickable="true"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="20"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:theme="@style/CancelButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

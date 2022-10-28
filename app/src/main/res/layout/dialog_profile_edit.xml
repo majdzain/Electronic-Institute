@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="560dp"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <com.ei.zezoo.MyTextView
+        android:id="@+id/txtDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:text="تعديل الملف الشخصي"
+        android:textColor="@color/dark_gray"
+        android:textSize="25sp"
+        android:textStyle="bold"></com.ei.zezoo.MyTextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="9.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/set_profile_image__"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/profile_image"
+                app:civ_border_color="@color/blue"
+                app:civ_border_width="2dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9.5"
+                    android:gravity="right"
+                    android:hint="الاسم"
+                    android:singleLine="true"
+
+                    android:textColor="@color/spec_black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+                    android:id="@+id/txtFather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9.5"
+                    android:gravity="right"
+                    android:hint="اسم الأب"
+                    android:singleLine="true"
+
+                    android:textColor="@color/spec_black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+
+                <EditText
+
+                    android:id="@+id/txtMother"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9.5"
+                    android:gravity="right"
+                    android:hint="اسم الأم"
+                    android:singleLine="true"
+
+                    android:textColor="@color/spec_black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+
+                    android:id="@+id/txtPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9.5"
+                    android:gravity="right"
+                    android:hint="مكان السكن"
+                    android:singleLine="true"
+
+                    android:textColor="@color/spec_black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/btnDate"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layoutDirection="locale"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                android:theme="@style/AddNewPurBill"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="--/--/----"
+                    android:textColor="@color/spec_black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@color/white"
+                    android:text="تاريخ الميلاد"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+
+                    android:id="@+id/txtId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9.5"
+                    android:gravity="right"
+                    android:hint="الرقم الوطني"
+                    android:singleLine="true"
+
+                    android:textColor="@color/spec_black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+                    android:id="@+id/txtFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9.5"
+                    android:gravity="right"
+                    android:hint="الأمانة"
+                    android:singleLine="true"
+
+                    android:textColor="@color/spec_black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+                    android:id="@+id/txtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9.5"
+                    android:gravity="right"
+                    android:hint="رقم الموبايل"
+                    android:singleLine="true"
+
+                    android:textColor="@color/spec_black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+                    android:id="@+id/txtTelephone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9.5"
+                    android:gravity="right"
+                    android:hint="رقم الهاتف الأرضي"
+                    android:singleLine="true"
+
+                    android:textColor="@color/spec_black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9.5"
+                    android:gravity="right"
+                    android:hint="البريد الإلكتروني"
+                    android:singleLine="true"
+
+                    android:textColor="@color/spec_black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_edit"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.7"
+        android:text="حفظ"
+        android:textColor="@color/dark_gray"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:theme="@style/AddNewPurBill" />
+
+</LinearLayout>

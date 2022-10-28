@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/comment_images_reply"
+    android:gravity="right">
+
+    <TextView
+        android:id="@+id/commentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#9CFEE3BC"
+        android:text="Student"
+        android:textColor="#000"
+        android:textSize="16.5sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/commentReply"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/layoutReply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:background="#C5C1C1">
+                <ImageView
+                    android:id="@+id/replyColor"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right|top"
+                    android:src="@drawable/reply_s" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/replyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Student"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/replyMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:elevation="4dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8dp">
+
+                        <TextView
+                            android:id="@+id/replyText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginBottom="8dp"
+                            android:drawablePadding="6dp"
+                            android:singleLine="true"
+                            android:text="Comment Of Studenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:id="@+id/layoutIconsReply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/replyIcon"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/voice_comment" />
+
+                        <TextView
+                            android:id="@+id/txtIconReply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="صورة"
+                            android:textColor="#555555"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/commentMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/blue"
+                android:elevation="4dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/blue"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/commentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:drawablePadding="6dp"
+                    android:text="Comment Of Student"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <com.ei.zezoo.MyGridView
+        android:id="@+id/commentImages"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:numColumns="3"
+        android:stretchMode="columnWidth" />
+
+    <FrameLayout
+        android:id="@+id/commentFrameImageOne"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/commentImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/aaaa"></ImageView>
+
+        <ProgressBar
+            android:id="@+id/loadingImage"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/commentLinearImageTwo">
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/commentImage1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/aaaa"></ImageView>
+
+            <ProgressBar
+                android:id="@+id/loadingImage1"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/commentImage2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/aaaa"></ImageView>
+
+
+            <ProgressBar
+                android:id="@+id/loadingImage2"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/commentLinearImageThree">
+
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/commentImage11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/aaaa"></ImageView>
+
+            <ProgressBar
+                android:id="@+id/loadingImage11"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/commentImage12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/aaaa"></ImageView>
+
+
+            <ProgressBar
+                android:id="@+id/loadingImage12"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/commentImage13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/aaaa"></ImageView>
+
+
+            <ProgressBar
+                android:id="@+id/loadingImage13"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/commentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textColor="#6f6e6e"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

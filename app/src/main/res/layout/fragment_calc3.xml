@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Calc3Fragment">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:theme="@style/TextLabel9">
+
+        <EditText
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:gravity="center"
+            android:hint="الواحدة الأساسية"
+            android:maxLines="2"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:entries="@array/length" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:theme="@style/TextLabel5">
+
+        <EditText
+            android:id="@+id/item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:gravity="center"
+            android:hint="الواحدة الفرعية"
+            android:maxLines="2"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:entries="@array/length" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clear"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/red"
+        android:clickable="true"
+
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+
+        app:cardBackgroundColor="@color/red"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/clear"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/backSpace"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner2"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/clear"
+        android:layout_toRightOf="@+id/clear"
+        android:background="@color/blue"
+        android:clickable="true"
+
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/backspace"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/num7"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/clear"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/green"
+        android:clickable="true"
+
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="7"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/num8"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/backSpace"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/num7"
+
+        android:layout_toRightOf="@+id/num7"
+        android:background="@color/green"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="8"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/num9"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/backSpace"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/num8"
+        android:layout_toRightOf="@+id/num8"
+        android:background="@color/green"
+
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="9"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/num4"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/num7"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/green"
+        android:clickable="true"
+
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:nestedScrollingEnabled="true"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="4"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/num5"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/num8"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/num7"
+
+        android:layout_toRightOf="@+id/num7"
+        android:background="@color/green"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="5"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/num6"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/num9"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/num5"
+        android:layout_toRightOf="@+id/num5"
+        android:background="@color/green"
+
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="6"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/num1"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/num4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/green"
+        android:clickable="true"
+
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/num2"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/num5"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/num7"
+
+        android:layout_toRightOf="@+id/num7"
+        android:background="@color/green"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="2"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/num3"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/num6"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/num2"
+        android:layout_toRightOf="@+id/num2"
+        android:background="@color/green"
+
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="3"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/num0"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/num2"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/num7"
+        android:layout_toRightOf="@+id/num7"
+
+        android:background="@color/green"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/green"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dot"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/num3"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/num0"
+        android:layout_toRightOf="@+id/num0"
+        android:background="@color/blue"
+
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="."
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/equal"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/num1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="@color/orange"
+
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        app:cardBackgroundColor="@color/orange"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="="
+            android:textSize="19sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

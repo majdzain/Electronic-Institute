@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transitions_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown"
+    tools:context=".SplashActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/abc" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:max="100"
+            android:minHeight="7dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/layer_progressbar" />
+
+        <com.hanks.htextview.evaporate.EvaporateTextView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textColor="@color/orange"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

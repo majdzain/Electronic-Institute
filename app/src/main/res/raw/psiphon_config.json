@@ -1,0 +1,20 @@
+
+
+{
+    "ClientVersion": "123",
+    "PropagationChannelId" : "...",
+    "SponsorId" : "...",
+    "RemoteServerListURLs": "...",
+    "RemoteServerListSignaturePublicKey" : "...",
+    "DataStoreDirectory" : "",
+    "DataStoreTempDirectory" : "",
+    "LogFilename" : "",
+    "LocalHttpProxyPort" : 0,
+    "LocalSocksProxyPort" : 0,
+    "EgressRegion" : "",
+    "TunnelProtocol" : "",
+    "ConnectionWorkerPoolSize" : 10,
+    "TunnelPoolSize" : 1,
+    "PortForwardFailureThreshold" : 10,
+    "UpstreamProxyUrl" : ""
+}

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignDActivity"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="الاسم الثلاثي"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:nextFocusForward="@id/edit_num_ph"
+                    android:singleLine="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <com.ei.zezoo.PrefixEditText
+                    android:id="@+id/edit_num_ph"
+                    fontPath="fonts/Lato-Light.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:hint="رقم الجوال(يدعم واتساب)"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:nextFocusForward="@id/edit_num_ph_"
+                    android:singleLine="true"
+                    android:tag="+963 "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <com.ei.zezoo.PrefixEditText
+                    android:id="@+id/edit_num_ph_"
+                    fontPath="fonts/Lato-Light.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:hint="رقم هاتف الأرضي(اختياري)"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:nextFocusForward="@id/edit_place"
+                    android:singleLine="true"
+                    android:tag="+963 11 "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+                    android:id="@+id/edit_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:hint="عنوان السكن"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:nextFocusForward="@id/edit_email"
+                    android:singleLine="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel9">
+
+                <EditText
+                    android:id="@+id/edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:hint="البريد الالكتروني(اختياري)"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:singleLine="true"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layoutDirection="locale">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/spinner_bg_blue"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_lang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:id="@+id/spin_img"
+                        android:layout_width="55dp"
+                        android:layout_height="33dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/drop" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="5"
+                    android:text="برنامج التصميم:"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layoutDirection="locale">
+
+                <com.ei.zezoo.PinEntryEditText
+                    android:id="@+id/edit_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:cursorVisible="false"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="6"
+                    android:text="رقم القسيمة:"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/floatingActionSubmitSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_action_submit"
+        app:fab_colorNormal="@color/blue"
+        app:fab_colorPressed="@color/blue"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_fab_label=""
+        app:menu_showShadow="true"></com.github.clans.fab.FloatingActionButton>
+
+</RelativeLayout>

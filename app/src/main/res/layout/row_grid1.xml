@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:src="@drawable/aaaa"></ImageView>
+        <ImageView
+            android:id="@+id/item_image_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right|top"
+            android:src="@drawable/close" />
+
+        <FrameLayout
+            android:id="@+id/layout_download"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="#CC000000"
+            android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/downloadingImage"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/done_image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/done"
+                    android:visibility="gone"></ImageView>
+
+                <ImageView
+                    android:id="@+id/not_done_image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/not_done"
+                    android:visibility="gone"></ImageView>
+                <ImageView
+                    android:id="@+id/upload_image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/upload"
+                    android:visibility="visible"></ImageView>
+        </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UserActivity">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/search"
+        android:orderInCategory="100"
+        android:title="بحث"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_connected"
+        android:orderInCategory="101"
+        android:icon="@drawable/reconnect"
+        android:title="غير متصل"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,312 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="actionOverflowButtonStyle">@android:color/white</item>
+        <item name="drawerArrowStyle">@android:color/white</item>
+    </style>
+    <style name="NumberPickerStyle">
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColorPrimary">@color/orange</item>
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">@color/orange</item>
+    </style>
+
+    <style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog" />
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryDark">@color/orange</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="collapsedTitleGravity">right</item>
+        <item name="expandedTitleGravity">right</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+    <style name="AppTheme_Red" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/light_red</item>
+        <item name="colorPrimaryDark">@color/light_red</item>
+        <item name="colorAccent">@color/orange</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+    <style name="AppTheme_Brown" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/darker_orange</item>
+        <item name="colorPrimaryDark">@color/darker_orange</item>
+        <item name="colorAccent">@color/orange</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+    <style name="AppTheme_Blue" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/blue</item>
+    <item name="colorPrimaryDark">@color/blue</item>
+    <item name="colorAccent">@color/orange</item>
+    <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+</style>
+    <style name="AppTheme_Yellow" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="colorAccent">@color/orange</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+    <style name="AppTheme_Purple" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryDark">@color/purple</item>
+        <item name="colorAccent">@color/orange</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+    <style name="AppThemeMain" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/brown</item>
+        <item name="colorPrimaryDark">@color/brown</item>
+        <item name="colorAccent">@color/brown</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+    </style><!--use item name="drawerArrowStyle" if you are using dark primaryColor in your app, else remove it-->
+    <style name="MaterialDrawer.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="AppThemeSubjects" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/light_green</item>
+        <item name="colorPrimaryDark">@color/light_green</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+
+    <style name="AppThemeCustomers" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">@color/yellow</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+
+    <style name="AppThemeBonds" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/darker_red</item>
+        <item name="colorPrimaryDark">@color/darker_red</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="SaveButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/orange</item>
+    </style>
+
+    <style name="AddEditButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/orange</item>
+    </style>
+
+    <style name="AddNewCustomer" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/yellow</item>
+    </style>
+
+    <style name="AddNewTaken" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/darker_blue</item>
+    </style>
+
+    <style name="AddNewPayment" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/brown</item>
+    </style>
+
+    <style name="AddNewJournal" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/darker_green</item>
+    </style>
+
+    <style name="AddNewSubject" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/light_green</item>
+    </style>
+
+    <style name="AddNewSalesBill" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/purple</item>
+    </style>
+
+    <style name="AddNewPurBill" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/blue</item>
+    </style>
+
+    <style name="AddNewTemBill" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/green</item>
+    </style>
+
+    <style name="AddNewSupplier" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="AddNewExpense" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/light_red</item>
+    </style>
+
+    <style name="CancelButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/red</item>
+    </style>
+
+
+    <style name="MainActivityTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MainActionBarTheme</item>
+    </style>
+
+    <style name="MainActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/orange</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem"></style>
+
+    <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
+        @null
+    </style>
+
+    <style name="TextLabel" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/yellow</item>
+        <item name="colorControlNormal">@color/yellow</item>
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
+
+    <style name="TextLabel1" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/light_green</item>
+        <item name="colorControlNormal">@color/light_green</item>
+        <item name="colorControlActivated">@color/light_green</item>
+    </style>
+
+    <style name="TextLabel2" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/brown</item>
+        <item name="colorControlNormal">@color/brown</item>
+        <item name="colorControlActivated">@color/brown</item>
+    </style>
+
+    <style name="TextLabel3" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/darker_blue</item>
+        <item name="colorControlNormal">@color/darker_blue</item>
+        <item name="colorControlActivated">@color/darker_blue</item>
+    </style>
+
+    <style name="TextLabel4" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/darker_green</item>
+        <item name="colorControlNormal">@color/darker_green</item>
+        <item name="colorControlActivated">@color/darker_green</item>
+    </style>
+
+    <style name="TextLabel5" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/orange</item>
+        <item name="colorControlNormal">@color/orange</item>
+        <item name="colorControlActivated">@color/orange</item>
+    </style>
+
+    <style name="TextLabel6" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="TextLabel7" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/light_red</item>
+        <item name="colorControlNormal">@color/light_red</item>
+        <item name="colorControlActivated">@color/light_red</item>
+    </style>
+
+    <style name="TextLabel8" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/purple</item>
+        <item name="colorControlNormal">@color/purple</item>
+        <item name="colorControlActivated">@color/purple</item>
+    </style>
+
+    <style name="TextLabel9" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/blue</item>
+        <item name="colorControlNormal">@color/blue</item>
+        <item name="colorControlActivated">@color/blue</item>
+    </style>
+
+    <style name="TextLabel10" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/green</item>
+        <item name="colorControlNormal">@color/green</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+</resources>
