@@ -6,5 +6,5 @@ An electronic educational platform that provides a comprehensive environment for
 #### Compatible with **API Level 21** and higher
 #### Linked with firebase(database - real-time database - storage - authentication - cloud messaging)
 
-#### This application is created with **Flutter** framework as a privte project **Bee Academy** and uploaded to gitlab please visit: https://gitlab.com/majd.zain/beeacademy   
+#### This application is created with **Flutter** framework as a privte project **(Bee Academy)** and uploaded to gitlab please visit: https://gitlab.com/majd.zain/beeacademy   
 
